@@ -1,12 +1,16 @@
 Install() {
   local latestVersion
   local target
+  local downloadHost
 
-  latestVersion=$(curl -s https://f004.backblazeb2.com/file/open-mic-night-downloads/cli/latest)
+  downloadHost=${DOWNLOAD_HOST:-'https://downloads.openmicnight.dev/cli/'}
+
+
+  latestVersion=$(curl -s "$downloadHost/latest")
   target=${TARGET:-'x86_64-unknown-linux-musl'}
 
   mkdir -p bin
-  curl -s "https://downloads.openmicnight.dev/cli/versions/${latestVersion}/${target}/omn" -o bin/omn
+  curl -s "$downloadHost/versions/${latestVersion}/${target}/omn" -o bin/omn
   chmod +x bin/omn
 }
 
