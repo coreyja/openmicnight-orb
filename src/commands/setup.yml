@@ -1,0 +1,13 @@
+description: >
+  Setup the CLI. If the following parameters are included their config will be set
+parameters:
+  account_id:
+    type: string
+    description: "The account id to scope calls to"
+  account_id:
+    type: string
+    description: "The token used to hit the OpenMicNight API"
+steps:
+  - run:
+      name: Setup the CLI
+      command: <<include(scripts/setup.sh)>>

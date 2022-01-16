@@ -7,6 +7,7 @@ usage:
   version: 2.1
   orbs:
     open-mic-night: coreyja/open-mic-night@1.2.3
+
   workflows:
     use-my-orb:
       jobs:
