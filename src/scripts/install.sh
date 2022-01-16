@@ -7,6 +7,7 @@ Install() {
 
   mkdir -p bin
   curl -s "https://f004.backblazeb2.com/file/open-mic-night-downloads/cli/versions/${latestVersion}/${target}/omn" -o bin/omn
+  chmod +x bin/omn
 }
 
 # Will not run if sourced for bats-core tests.
