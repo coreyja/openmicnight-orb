@@ -6,7 +6,7 @@ Install() {
   target=${TARGET:-'x86_64-unknown-linux-musl'}
 
   mkdir -p bin
-  curl -s "https://f004.backblazeb2.com/file/open-mic-night-downloads/cli/versions/${latestVersion}/${target}/omn" -o bin/omn
+  curl -s "https://downloads.openmicnight.dev/cli/versions/${latestVersion}/${target}/omn" -o bin/omn
   chmod +x bin/omn
 }
 
