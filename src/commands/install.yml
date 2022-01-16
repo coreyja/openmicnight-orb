@@ -1,0 +1,6 @@
+description: >
+  Install the OpenMicNight CLI to `bin/omn`
+steps:
+  - run:
+      name: Install OpenMicNight
+      command: <<include(scripts/install.sh)>>
