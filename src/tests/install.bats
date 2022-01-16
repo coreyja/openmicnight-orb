@@ -1,12 +1,16 @@
 # Runs prior to every test
 setup() {
     # Load our script file.
-    source ./src/scripts/greet.sh
+    source ./src/scripts/install.sh
 }
 
-@test '1: Greet the world' {
+teardown() {
+  rm -rf bin
+}
+
+@test '1: Install the OpenMicNight CLI tool' {
     # Capture the output of our "Greet" function
-    Greet
+    Install
 
     [ -f 'bin/omn' ]
 }
