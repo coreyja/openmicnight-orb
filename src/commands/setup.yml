@@ -3,9 +3,11 @@ description: >
 parameters:
   account_id:
     type: string
+    default: ""
     description: "The account id to scope calls to"
   api_token:
     type: string
+    default: ""
     description: "The token used to hit the OpenMicNight API"
 steps:
   - run:
