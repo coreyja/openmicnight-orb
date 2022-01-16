@@ -20,7 +20,7 @@ teardown() {
 @test '2: With Stage Name Provided' {
     export STAGE_NAME="test-stage"
 
-    run -2 LineUp
+    run -0 LineUp
 
     [ -f "omn/stage-pass.txt" ]
 }
