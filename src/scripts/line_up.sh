@@ -6,7 +6,7 @@ LineUp() {
 
   local stagePass
 
-  stagePass=$(bin/omn --format plain line-up $STAGE_NAME)
+  stagePass=$(bin/omn --format plain line-up "$STAGE_NAME")
 
   echo "$stagePass" > omn/stage-pass.txt
 }

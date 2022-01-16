@@ -12,7 +12,7 @@ teardown() {
 }
 
 @test '1: Without Stage Name Provided' {
-    run -! LineUp
+    run ! LineUp
 
     [ "$output" = 'STAGE_NAME is not set' ]
 }
@@ -20,7 +20,7 @@ teardown() {
 @test '2: With Stage Name Provided' {
     export STAGE_NAME="test-stage"
 
-    run -0 LineUp
+    LineUp
 
     [ -f "omn/stage-pass.txt" ]
 }
